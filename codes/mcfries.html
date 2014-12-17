@@ -1,0 +1,165 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="mcf.html.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Tips & Tricks: How to spice up your menu with CSS3" />
+        <meta name="keywords" content="menu, hover, css3, effect, slide out, image, transition" />
+<title>Mcdonald's Cabanatuan</title>
+	<link href="../style/mcbreakfast.css" rel="stylesheet" type="text/css"/>
+    <link href="../style/mcbreakfastdemo.css" rel="stylesheet" type="text/css"/>
+    <link href="../style/mcfriesstyle.css" rel="stylesheet" type="text/css"/>
+    
+    
+    <link rel="shorcut icon" href="../favicon.ico" />
+
+		
+</head>
+<body bgcolor="#eae3d1">
+		<div id="topbanner">
+	<div id="bannertextcontainer">
+	<a href="../index.html"><div id="logo"></div></a><!--end of logo div-->
+	
+    <br /><br />
+
+    <div id="menutop"><a href="../index.html">What's new</a> &nbsp; <a href="food.html">Our food</a>  &nbsp; 
+     <a href="mccelebration.html">McCelebration</a>   &nbsp; 
+    <a href="mcdelivery.html">McDelivery</a>  &nbsp;  <a href="about.html">About</a>  
+     &nbsp; <a href="customer.html">Customer</a> </div>
+
+</div><!--bannertextcontainer end div -->
+</div><!--topbanner end div -->
+
+ 
+<div id="mcdelivery">
+<img src="../images/mcdelivery.png" />
+</div>
+
+<div id="container">
+
+<ul class="mh-menu">
+
+				<li><a href="mcbreakfast.html"><span>McDelivery</span> <span>Breakfast</span>
+                
+                </a>
+                  </li>
+                
+                
+				<li><a href="mcburger.html"><span>McDelivery</span> <span>Burger</span>
+                </a>
+                </li>
+                
+				<li><a href="mcfries.html"><span>McDelivery</span> <span>Fries</span>
+                </a>
+                </li>
+
+				<li><a href="mcspag.html"> <span>McDelivery</span> <span>Spaghetti & Chicken</span>
+                </a>
+                </li>
+                
+				<li><a href="mccafe.html"><span>McDelivery</span> <span>McCafe</span>
+                </a>
+                </li>
+                
+				<li><a href="mcdrink.html"><span>McDelivery</span> <span>Drinks</span>
+               </a>
+                </li>
+               
+			</ul>
+            
+            <div id="rightcontent">
+            
+            <form id="form1" runat="server">
+
+<center>
+<table>
+
+<tr>
+
+
+	<asp:Repeater id="ProductsList" runat="server" >
+   
+		<ItemTemplate>
+				
+			<td>
+				<table width="200px">
+					<tr>
+                    
+						<td rowspan="6"><img src="../images/<%# DataBinder.Eval(Container.DataItem, "image")%>" alt="<%# DataBinder.Eval(Container.DataItem, "pname")%>" width="150" height="118" /></td>
+						
+					</tr>
+		
+				</table>
+                <center>
+                <table>
+                
+                
+						
+						<td style="color:#333333"><strong><%# DataBinder.Eval(Container.DataItem, "pname")%></strong></td>
+                        
+				
+                </table>
+                </center>
+                
+                <center>
+                <table>
+                <tr>
+						
+						<td style="color:#333333"><strong><%# String.Format("{0:#,###.00}", DataBinder.Eval(Container.DataItem, "price"))%></strong></td> 
+					</tr>
+                    
+                </table>
+                
+                </center>
+			</td>
+            
+		
+   
+	  </ItemTemplate>
+     
+	</asp:Repeater>
+
+     
+
+<asp:LinkButton ID="lnkBtnNext" runat="server" Font-Underline="False" OnClick="lnkBtnNext_Click" Font-Bold="True"><img src="../images/button.png" /></asp:LinkButton>
+     &nbsp;&nbsp;&nbsp 
+<asp:LinkButton ID="lnkBtnPrev" runat="server" Font-Underline="False" OnClick="lnkBtnPrev_Click" Font-Bold="True"><img src="../images/button1.png" /></asp:LinkButton>
+	
+    </tr>
+
+</table>
+    </center>
+
+<input id="txtHidden" style="width: 28px" type="hidden" value="0" runat="server" />
+</form>
+            
+            </div>
+
+</div>
+ <div id="footlogoscontainer"> <div id="footlogo"><a href="#thumb"><img src="../images/pootpoot.png" /></a>
+                          </div> </div>
+     <div id="footer">
+ 		<div id="footbanner">
+        <div id="footcontainer">
+        <div id="footmenu">
+        <div id="footfirst">
+         <p><a href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy & Policy</a> | 
+        <font color="#FFFFFF"> Follow us on</font> &nbsp;&nbsp;&nbsp;</p>
+    	<p><font size="2" color="#9d9fa1">2014 McDonald's All rights reserved | Web Design by:</font><font color="#FFFFFF" size="2"> 
+        <a href="https://www.facebook.com/rens.ramos" target="_blank">Rens Daniel Ramos</a></font></p>
+        </div>
+        <div id="circlefb"><a href="https://www.facebook.com/McDonaldsCabanatuan" target="_blank"><img src="../images/fb.png" /></a>
+        <a href="https://twitter.com/McDo_PH" target="_blank"><img src="../images/twitter.png" /></a>
+        </div>
+       
+          </div>
+        </div>
+        </div> 
+       	</div>
+        <embed height="50" width="100" src="../audio/Hooray For Today!.mp3" autostart="true" hidden="true">
+
+       
+</body>
+</html>

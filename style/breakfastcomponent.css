@@ -1,0 +1,96 @@
+
+
+/* Needed for a fluid height: */
+.container, .main { height: 100%;
+}
+html{
+background-color:#0b0f13;
+}
+
+/* main wrapper */
+.cbp-contentslider {
+	width: 100%;
+	height: 470px;
+	margin: 0 auto;
+	padding:0;
+	position: relative;
+	
+
+}
+
+.cbp-contentslider > ul {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+	
+	
+}
+
+.cbp-contentslider > ul li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+    top: 0;
+	
+	}
+
+/* Whithout JS, we use :target */
+.cbp-contentslider > ul li:target {
+	z-index: 100;
+
+}
+
+.cbp-contentslider nav {
+
+	left: 0;
+	width:860px;
+	height: 150px;
+	z-index: 1000;
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+
+.cbp-contentslider nav a {
+margin-top:20px;
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	color: #47a3da;
+	background: #eae3d1;
+	outline: none;
+	text-align: center;
+	line-height: 3;
+	position: relative;
+	padding-left: 0;
+	
+	text-transform: uppercase;
+	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.cbp-contentslider nav a span {
+	display: block;
+}
+
+.cbp-contentslider nav a:hover {
+	background-color: #eae3d1;
+	color: #eae3d1;
+}
+
+.cbp-contentslider nav a.rc-active {
+	background-color: #b20f19;
+	color: #b20f19;
+	height:140px;
+}
+
